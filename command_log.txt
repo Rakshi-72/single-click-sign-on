@@ -1,0 +1,5 @@
+[2023-12-19 21:25:02.158566] - C:\Users\raksh\OneDrive\Desktop\java\node\newNode ; npm test[2023-12-19 21:25:19.747538] - C:\Users\raksh\OneDrive\Desktop\java\node\newNode ; npm test[2023-12-19 21:26:01.351865] - C:\Users\raksh\OneDrive\Desktop\java\node\newNode ; npm test 
+[2023-12-19 21:26:16.560055] - C:\Users\raksh\OneDrive\Desktop\java\node\newNode ; npm test 
+[2023-12-19 21:26:35.116226] - C:\Users\raksh\OneDrive\Desktop\java\node\newNode ; npm test 
+[2023-12-19 21:30:35.946639] - C:\Users\raksh\OneDrive\Desktop\java\node\newNode ; npm test - executed command ? True
+[2023-12-19 21:30:35.946639] - kichha ; npm start - executed command ? False
