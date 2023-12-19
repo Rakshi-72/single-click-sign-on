@@ -71,19 +71,24 @@ def run_script():
     """
     The `run_script` function runs a series of npm commands in specified directories using PowerShell.
     """
-    commands = ["npm test", "npm start",
-                "npm run start-dev", "npm run dev", "npm run dev"]
-    directories = [entry_list[i].get()
-                   for i in range(1, 6) if select_vars[i].get()]
-    for cmd, directory in zip(commands, directories):
+    commands = {"select_1": "npm test", "select_2": "npm start",
+                "select_3": "npm run start-dev", "select_4": "npm run dev", "select_5": "npm run dev"}
+    # directories = [entry_list[i].get()
+    #                for i in range(1, 6) if select_vars[i].get()]
+
+    directories = {
+        f'select_{i}': entry_list[i].get() for i in range(1, 6) if select_vars[i].get()
+    }
+    for key in directories.keys():
         log_file = 'command_log.txt'
         run_cmd = False
+        directory = directories[key]
         if len(directory) > 0 and os.path.exists(directory):
-            run_powershell_command(cmd, directory)
+            run_powershell_command(commands[key], directory)
             run_cmd = True
         with open(log_file, "a") as file:
             file.write(
-                f'[{datetime.now()}] - {directory +" ; "+ cmd } - executed command ? {run_cmd}\n')
+                f'[{datetime.now()}] - {directory +" ; "+ commands[key] } - executed command ? {run_cmd}\n')
 
 
 def create_entry_label(parent, text, row):
