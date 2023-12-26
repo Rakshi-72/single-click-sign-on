@@ -1,11 +1,15 @@
-[2023-12-19 21:25:02.158566] - C:\Users\raksh\OneDrive\Desktop\java\node\newNode ; npm test[2023-12-19 21:25:19.747538] - C:\Users\raksh\OneDrive\Desktop\java\node\newNode ; npm test[2023-12-19 21:26:01.351865] - C:\Users\raksh\OneDrive\Desktop\java\node\newNode ; npm test 
-[2023-12-19 21:26:16.560055] - C:\Users\raksh\OneDrive\Desktop\java\node\newNode ; npm test 
-[2023-12-19 21:26:35.116226] - C:\Users\raksh\OneDrive\Desktop\java\node\newNode ; npm test 
-[2023-12-19 21:30:35.946639] - C:\Users\raksh\OneDrive\Desktop\java\node\newNode ; npm test - executed command ? True
-[2023-12-19 21:30:35.946639] - kichha ; npm start - executed command ? False
-[2023-12-19 22:13:47.538277] - C:\Users\raksh\OneDrive\Desktop\java\node\newNode ; npm test - executed command ? True
-[2023-12-19 22:13:47.540279] - kichha ; npm start - executed command ? False
-[2023-12-19 22:14:07.780043] - kichha ; npm start - executed command ? False
-[2023-12-19 22:14:19.129055] - sulla ; npm run start-dev - executed command ? False
-[2023-12-19 22:14:31.654389] - sulla ; npm run start-dev - executed command ? False
-[2023-12-19 22:14:31.655567] - super ; npm run dev - executed command ? False
+[2023-12-26 14:54:05.844548] - C:\Users\raksh\OneDrive\Desktop\java\node ; npm run dev - executed command ? True
+[2023-12-26 14:54:05.845548] -  ; npm start - executed command ? False
+[2023-12-26 14:54:08.169087] - C:\Users\raksh\OneDrive\Desktop\java\node ; npm run start-dev - executed command ? True
+[2023-12-26 14:54:26.359183] - C:\Users\raksh\OneDrive\Desktop\java\node ; npm run dev - executed command ? True
+[2023-12-26 14:54:33.610147] - C:\Users\raksh\OneDrive\Desktop\java\node ; npm run dev - executed command ? True
+[2023-12-26 15:00:51.368890] - C:\Users\raksh\OneDrive\Desktop\java\node ; npm run start-dev - executed command ? True
+[2023-12-26 15:01:00.587207] - C:\Users\raksh\OneDrive\Desktop\java\node ; npm start - executed command ? True
+[2023-12-26 15:01:02.152304] - C:\Users\raksh\OneDrive\Desktop\java\node ; npm run start-dev - executed command ? True
+[2023-12-26 15:01:06.682672] - C:\Users\raksh\OneDrive\Desktop\java\node ; npm start - executed command ? True
+[2023-12-26 15:01:12.785601] - C:\Users\raksh\OneDrive\Desktop\java\node ; npm run coverage - executed command ? True
+[2023-12-26 15:01:22.027613] - C:\Users\raksh\OneDrive\Desktop\java\node ; npm run test - executed command ? True
+[2023-12-26 15:01:39.990058] - C:\Users\raksh\OneDrive\Desktop\java\node ; npm run dev - executed command ? True
+[2023-12-26 15:01:44.622565] - C:\Users\raksh\OneDrive\Desktop\java\node ; npm run coverage - executed command ? True
+[2023-12-26 15:01:52.608071] - C:\Users\raksh\OneDrive\Desktop\java\node ; npm run coverage - executed command ? True
+[2023-12-26 15:01:54.274985] - C:\Users\raksh\OneDrive\Desktop\java\node ; npm run test - executed command ? True
