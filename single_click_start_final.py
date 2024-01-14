@@ -111,33 +111,36 @@ def create_entry_label(parent, text, row, options):
     :return: The function `create_entry_label` returns three values: `entry`, `select_var`, and
     `selected_option`.
     """
-    label = tk.Label(parent, text=text)
+    label = tk.Label(parent, text=text, anchor="w")
     entry = tk.Entry(parent)
+    entry.config(background="light gray")
     select_var = tk.BooleanVar()
-    checkbox = tk.Checkbutton(parent, text="Select", variable=select_var)
+    checkbox = tk.Checkbutton(
+        parent, variable=select_var, anchor="w", activebackground='lightblue')
 
     selected_option = tk.StringVar(parent)
     selected_option.set(options[0])  # Set default option
 
     dropdown = tk.OptionMenu(parent, selected_option, *options)
-    label.grid(row=row, column=0, padx=5, pady=5)
-    entry.grid(row=row, column=1, padx=5, pady=5)
-    checkbox.grid(row=row, column=3, padx=5, pady=5)
-    dropdown.grid(row=row, column=2, padx=5, pady=5)
-    dropdown.config(width=20)
+    label.grid(row=row, column=1, padx=5, pady=5, sticky="w")
+    entry.grid(row=row, column=2, padx=5, pady=5, sticky="w")
+    checkbox.grid(row=row, column=0, padx=5, pady=5, sticky="w")
+    dropdown.grid(row=row, column=3, padx=5, pady=5, sticky="w")
+    custom_color = (148, 209, 196)
+    dropdown.config(width=20, background="light gray")
     return entry, select_var, selected_option
 
 
 root = tk.Tk()
 root.title("Run apps")
-root.geometry("575x280")  # Width x Height
+root.geometry("490x280")  # Width x Height
 
 entry_list = {}
 select_vars = {}
 select_command = {}
 
-label_names = ["Enter path for NodeLayer", "Enter path for UI",
-               "Enter path for Mock Server", "Enter path for Server", "Enter path for Client"]
+label_names = ["path for NodeLayer", "path for UI",
+               "path for Mock Server", "path for Server", "path for Client"]
 
 drop_down_options = [
     ["npm run dev", "npm run test", "npm run coverage"],
@@ -147,9 +150,9 @@ drop_down_options = [
     ["npm run dev"],
 ]
 
-
 # This code block is creating a set of entry labels, checkboxes, and dropdown menus in a tkinter
 # window.
+tk.Label(root, text="", padx=5, pady=5).grid(row=0, column=0, columnspan=4)
 for i, label_text in enumerate(label_names, start=1):
     entry, select_var, selected_option = create_entry_label(
         parent=root,
@@ -162,13 +165,25 @@ for i, label_text in enumerate(label_names, start=1):
 
 load_inputs()
 
-
 validate_button = tk.Button(
-    root, text="Validate Paths", command=validate_paths, bg='red')
-validate_button.grid(row=5, column=0, columnspan=2, padx=5, pady=10)
+    root,
+    text="Validate Paths",
+    command=validate_paths,
+    bg='light pink',
+    borderwidth=5,  # Adjust borderwidth for a more pronounced curve
+    relief=tk.RAISED  # Use GROOVE relief for a curved appearance
+)
+validate_button.grid(row=5, column=2, columnspan=2,
+                     padx=5, pady=10, sticky="w")
 
-run_button = tk.Button(root, text="run", command=run_script, bg='green')
-run_button.grid(row=5, column=1, columnspan=2, padx=5, pady=20)
-
+run_button = tk.Button(
+    root,
+    text="Run",
+    command=run_script,
+    bg='light green',
+    relief=tk.RAISED, borderwidth=5  # Use GROOVE relief for a curved appearance
+)
+run_button.grid(row=5, column=3, columnspan=2, padx=5, pady=20, sticky="w")
+root.config(bg="#e9f7ec")
 root.protocol("WM_DELETE_WINDOW", save_inputs)
 root.mainloop()
